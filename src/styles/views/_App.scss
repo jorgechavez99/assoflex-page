@@ -1,0 +1,32 @@
+@import 'https://fonts.googleapis.com/css?family=Archivo:300,400,500,600,700';
+// @import '../fonts/fonts.scss';
+@import "react-image-gallery/styles/scss/image-gallery.scss";
+#root {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+* {
+    font-family: "Archivo", Arial, Helvetica, sans-serif;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    border:  none;
+    background:none;
+    font-family: "Archivo", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
