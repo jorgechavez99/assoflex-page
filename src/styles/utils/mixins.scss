@@ -1,0 +1,278 @@
+@mixin for-phone-only {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-phone-tablet-only {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin navBar {
+
+    img {
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        color: rgba(65, 65, 66, 255);
+        font-size: 1rem;
+    }
+
+    li:hover {
+        border-bottom: 4px solid rgba(64, 186, 244, 255);
+        cursor: pointer;
+
+    }
+
+
+    @include for-desktop {
+        //===992 max====//
+        width: 99.8%;
+        display: flex;        
+
+        &>.img-container {
+            width: 350px;
+        }
+
+        &>.btn-contacto {
+            margin: auto;
+            padding: 16px 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 800;
+            background-color: rgba(64, 186, 244, 255);
+            color: #fff;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: box-shadow, transform;
+            transition-property: box-shadow, transform;
+        }
+        &>.btn-contacto:hover,
+        .btn-contacto:focus,
+        .btn-contacto:active {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+        }
+    }
+
+    @include for-phone-tablet-only {
+        //=======992 min=======//
+        margin-bottom: 30px;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            gap: 2rem;
+            color: rgba(65, 65, 66, 255);
+            font-size: 1rem;
+        }
+        &>.img-container {
+            width: 20rem;
+            margin: auto;
+        }
+        &>.btn-contacto {
+            display: flex;
+            align-items: center;
+            margin: auto;
+            padding: 16px 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 800;
+            background-color: rgba(64, 186, 244, 255);
+            color: #fff;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: box-shadow, transform;
+            transition-property: box-shadow, transform;
+        }
+        &>.btn-contacto:hover,
+        .btn-contacto:focus,
+        .btn-contacto:active {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+        }
+    }
+
+    @include for-phone-only() {
+        //====768 min==//
+margin-bottom: 30px;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            
+            gap: 2rem;
+            color: rgba(65, 65, 66, 255);
+            font-size: 1rem;
+        }
+        &>.img-container {
+            width: 20rem;
+            margin: auto;
+        }
+        &>.btn-contacto {
+            display: flex;
+            align-items: center;
+            margin: auto;
+            padding: 16px 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 800;
+            background-color: rgba(64, 186, 244, 255);
+            color: #fff;
+            border-radius: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: box-shadow, transform;
+            transition-property: box-shadow, transform;
+        }
+        &>.btn-contacto:hover,
+        .btn-contacto:focus,
+        .btn-contacto:active {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+        }
+    }
+
+}
+
+@mixin viewGeneral {
+
+
+
+    @include for-desktop {
+
+        //===992 max====//
+        .slide-container {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    @include for-phone-tablet-only {
+        //=======992 min=======//
+       
+    }
+
+    @include for-phone-only() {
+        //====768 min==//
+        
+    }
+
+}
+
+@mixin footer {
+
+  img{
+    width: 100%;
+  }
+
+    @include for-desktop {
+
+        //===992 max====//
+
+        display: flex;
+        justify-content: space-between;
+
+        &>.footer-logo{
+            width: 400px;
+        }
+        ul{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: rgba(255,255,255,255);
+            font-size: 1rem;
+        }
+        p{
+            color: rgba(255,255,255,255);
+        }
+       
+       
+        background-color: rgba(7,12,12,255);
+      
+    }
+
+    @include for-phone-tablet-only {
+        //=======992 min=======//
+        
+        display: flex;
+        justify-content: space-between;
+
+        &>.footer-logo{
+            width: 400px;
+        }
+        ul{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: rgba(255,255,255,255);
+            font-size: 1rem;
+        }
+        p{
+            color: rgba(255,255,255,255);
+        }
+       
+       
+        background-color: rgba(7,12,12,255);
+        
+       
+    }
+
+    @include for-phone-only() {
+        //====768 min==//
+        
+        display: flex;
+        flex-direction: column;
+        &>.footer-logo{
+            width: 400px;
+            margin: auto;
+        }
+        ul{
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: rgba(255,255,255,255);
+            font-size: 1rem;
+        }
+        p{
+            color: rgba(255,255,255,255);
+        }
+       
+       
+        background-color: rgba(7,12,12,255);
+        
+    }
+
+}
