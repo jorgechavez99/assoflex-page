@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import logo from '/logo-assoflex-black.png'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,7 @@ function App() {
     <>
       <div className='container'>
           <a href="https://www.assoflex.com" className='logo'>
-          <img src="src\assets\logo-assoflex-black.png" alt="logo-assoflex" />
+          <img src={logo} alt="logo-assoflex" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
